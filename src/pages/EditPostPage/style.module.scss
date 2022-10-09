@@ -1,0 +1,10 @@
+.delete_btn {
+    margin: 1rem auto 1rem 1rem;
+    color: var(--warning);
+    border-color: var(--warning);
+
+    &:hover,&:focus {
+        box-shadow: 0 0 0.5em rgba($color: #fe7171, $alpha: 0.5);
+        text-shadow: 0 0 0.5em rgba($color: #fe7171, $alpha: 0.5);
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../styles/mixins.scss';
+
+.login {
+    @include content-block;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.options {
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .signin,.signup{
+        background-color: transparent;
+        font-weight: 500;
+        color: var(--dark-text);
+    }
+
+    .signin.active {
+        color: var(--accent-second-contrast);
+        box-shadow: 0 0 0.5em var(--accent-second);
+    }
+
+    .signup.active {
+        color: var(--accent-first);
+        box-shadow: 0 0 0.5em var(--accent-first);
+    }
+}

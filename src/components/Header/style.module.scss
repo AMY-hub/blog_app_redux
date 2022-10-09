@@ -1,0 +1,87 @@
+.header {
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--bright-text);
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    &__name {
+        font-size: 2.8rem;
+        font-weight: 500;
+        color: var(--accent-second-contrast);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__greeting {
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--bright-text);
+        border-bottom: 2px solid var(--accent-first);
+        opacity: 0.9;
+    }
+
+    &__user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    @media(max-width: 750px) {
+        padding-bottom: 2.5rem;
+        &__name {
+            font-size: 2.3rem;
+        }
+    }
+
+    @media(max-width: 590px) {
+        padding-bottom: 2rem;
+        &__greeting {
+            display: none;
+        }
+    }
+
+    @media(max-width: 430px) {
+        padding-bottom: 1.5rem;
+        &__container {
+            flex-direction: column;
+        }
+
+        &__name {
+            font-size: 2rem;
+        }
+
+        &__user {
+            gap: 0.6rem;
+        }
+    }
+}
+
+.logo {
+    width: 4rem;
+    fill: var(--accent-second);
+    transition: transform 600ms;
+
+    &:hover {
+        transform: rotate(180deg);
+    }
+
+    @media(max-width: 430px) {
+        width: 3em;
+    }
+}

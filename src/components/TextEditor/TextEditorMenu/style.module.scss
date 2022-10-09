@@ -1,0 +1,25 @@
+.menubar{
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border-bottom: 2px solid var(--dark-text);
+
+    button {
+        padding: 0.3rem;
+        margin: 0.2rem;
+        font-size: 1rem;
+        color: var(--bright-text);
+        background-color: var(--content-bg-light);
+        border: 2px solid var(--dark-text);
+        border-radius: 0.5rem;
+        transition: background-color 300ms;
+
+        &:hover,&:target {
+            background-color: rgba($color: #b2b2b2, $alpha: 0.3);
+        }
+    }
+
+    .active {
+        background-color: var(--accent-second);
+    }
+}
+

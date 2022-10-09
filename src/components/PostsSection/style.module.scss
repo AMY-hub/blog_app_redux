@@ -1,0 +1,12 @@
+@import '../../styles/mixins.scss';
+
+.posts_section {
+    width: 100%;
+}
+
+.posts_section__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,36 @@
+@import '../../../styles/mixins.scss';
+
+.form {
+    @include content-block;
+    margin: 0 auto;
+}
+
+.form__fields {
+    display: grid;
+    gap: 15px;
+}
+
+.form__name {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--main-text);
+}
+
+.form__title {
+    @include form-field;
+    width: 80%;
+}
+
+.form__text {
+    min-height: 35rem;
+}
+
+.form__body {
+    @include form-field;
+    width: 100%;
+}
+
+.form__submit {
+    display: block;
+    margin-left: auto;
+}

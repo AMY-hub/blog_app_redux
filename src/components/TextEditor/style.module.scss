@@ -1,0 +1,35 @@
+@import '../../styles/mixins.scss';
+
+.texteditor {
+    @include form-field;
+
+    p[data-placeholder]:first-child::before {
+        content: attr(data-placeholder);
+        font-size: 1rem;
+        color: var(--dark-text);
+    }
+
+    ul, ol {
+        margin-left: 1.5rem;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace;
+        color: var(--accent-second-contrast);
+    }
+}
+
+.texteditor__textfield {
+    padding: 1rem;
+    min-height: 10rem;
+    word-break: break-word;
+}
+
+.texteditor__info {
+    font-size: 0.9rem;
+    color: var(--dark-text);
+}
+
+.danger {
+    color: var(--warning);
+}
