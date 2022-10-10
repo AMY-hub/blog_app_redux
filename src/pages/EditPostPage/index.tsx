@@ -51,9 +51,10 @@ export const EditPostPage = () => {
                 return (
                     <Modal
                         onClose={onClose}
-                        message='Do you really want to delete this post?'
                         callback={handleConfirm}
-                    />
+                    >
+                        'Do you really want to delete this post?'
+                    </Modal>
                 );
             }
         });

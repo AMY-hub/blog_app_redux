@@ -13,7 +13,7 @@
         border-radius: 0.5rem;
         transition: background-color 300ms;
 
-        &:hover,&:target {
+        &:hover,&:focus {
             background-color: rgba($color: #b2b2b2, $alpha: 0.3);
         }
     }

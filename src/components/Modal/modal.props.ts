@@ -1,5 +1,9 @@
+import { ReactNode } from 'react';
+
 export interface ModalProps {
-    message: string,
-    onClose: () => void;
-    callback: (onClose: () => void) => void;
+    children: ReactNode,
+    onClose: () => void,
+    callback: (onClose: () => void) => void,
+    confitmBtnText?: string,
+    cancelBtnText?: string
 }

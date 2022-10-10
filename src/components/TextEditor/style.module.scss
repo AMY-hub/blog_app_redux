@@ -2,6 +2,9 @@
 
 .texteditor {
     @include form-field;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     p[data-placeholder]:first-child::before {
         content: attr(data-placeholder);
@@ -28,6 +31,24 @@
 .texteditor__info {
     font-size: 0.9rem;
     color: var(--dark-text);
+}
+
+.texteditor__add_img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.texteditor__img_url {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        margin-top: 0.5rem;
+        @include form-field;
+    }
 }
 
 .danger {

@@ -3,12 +3,12 @@ import { ModalProps } from './modal.props';
 
 import './style.scss';
 
-export const Modal: React.FC<ModalProps> = ({ onClose, message, callback }) => {
+export const Modal: React.FC<ModalProps> = ({ onClose, children, callback, confitmBtnText = 'Yes', cancelBtnText = 'No' }) => {
     return (
         <div className='modal'>
             <div className='modal__content'>
                 <div className='modal__body' role='alert'>
-                    <p>{message}</p>
+                    {children}
                 </div>
                 <div className='modal__footer'>
                     <Button
@@ -16,14 +16,18 @@ export const Modal: React.FC<ModalProps> = ({ onClose, message, callback }) => {
                         className='modal__yes'
                         onClick={() => callback(onClose)}
                         aria-label='confirm action'
-                    >Yes</Button>
+                    >
+                        {confitmBtnText}
+                    </Button>
                     <Button
                         as='button'
                         styleType='light'
                         className='modal__no'
                         onClick={onClose}
                         aria-label='cancel action'
-                    >No</Button>
+                    >
+                        {cancelBtnText}
+                    </Button>
                 </div>
             </div>
         </div>
