@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blog_app_redux/static/css/main.8902bddd.css",
-    "main.js": "/blog_app_redux/static/js/main.2cf26c04.js",
+    "main.css": "/blog_app_redux/static/css/main.25e72b74.css",
+    "main.js": "/blog_app_redux/static/js/main.ceaba4a4.js",
     "static/media/icomoon.svg?j05gf0": "/blog_app_redux/static/media/icomoon.481c195fed0bdeb718a8.svg",
     "static/media/web.svg": "/blog_app_redux/static/media/web.8765310f59cd8701a1c555b80422c41f.svg",
     "static/media/icomoon.eot?j05gf0": "/blog_app_redux/static/media/icomoon.7cf96f141a3cc0ec1383.eot",
@@ -11,11 +11,11 @@
     "static/media/search.svg": "/blog_app_redux/static/media/search.7e3b9c404b4bcf24c75c1548916adf34.svg",
     "static/media/clear.svg": "/blog_app_redux/static/media/clear.537a9ffc722ed8aa0eba4727a3d1f4f3.svg",
     "static/media/icon.svg": "/blog_app_redux/static/media/icon.5d3653b23802d3d88a9fb30dd38da2b6.svg",
-    "main.8902bddd.css.map": "/blog_app_redux/static/css/main.8902bddd.css.map",
-    "main.2cf26c04.js.map": "/blog_app_redux/static/js/main.2cf26c04.js.map"
+    "main.25e72b74.css.map": "/blog_app_redux/static/css/main.25e72b74.css.map",
+    "main.ceaba4a4.js.map": "/blog_app_redux/static/js/main.ceaba4a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.8902bddd.css",
-    "static/js/main.2cf26c04.js"
+    "static/css/main.25e72b74.css",
+    "static/js/main.ceaba4a4.js"
   ]
 }
