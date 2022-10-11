@@ -5,8 +5,7 @@ import { ChangingPostData, DeleteData, LoadedPostsParams, PostsWithCount, Public
 
 export const loadPosts = createAsyncThunk<PostsWithCount, LoadedPostsParams, ThunkApiTypes>(
     'loadPaginatedPosts',
-    async ({ page, filter, authotId, search }, { extra: { api, client }, getState }) => {
-        const { filter: { order } } = getState();
+    async ({ page, filter, order, authotId, search }, { extra: { api, client } }) => {
         const res = await client.get<PostData[]>(api.getSelectedPosts(order, page, filter, authotId, search));
 
         return {
@@ -24,26 +23,6 @@ export const loadPosts = createAsyncThunk<PostsWithCount, LoadedPostsParams, Thu
         }
     }
 );
-
-// export const searchPosts = createAsyncThunk<PostsWithCount, string, ThunkApiTypes>(
-//     'searchPosts',
-//     async (search, { extra: { api, client } }) => {
-//         const res = await client.get<PostData[]>(api.getSearched(search));
-//         return {
-//             posts: res.data,
-//             totalCount: +res.headers['x-total-count'],
-//             currentPage: 1
-//         }
-//     },
-//     {
-//         condition: (_, { getState }) => {
-//             const { posts } = getState();
-//             if (posts.loadingPostsStatus === 'pending') {
-//                 return false;
-//             }
-//         }
-//     }
-// )
 
 export const createPost = createAsyncThunk<PostData, Publication, ThunkApiTypes>(
     'createPost',
@@ -88,7 +67,7 @@ export const deletePost = createAsyncThunk<void, DeleteData, ThunkApiTypes>(
             }
         });
         if (status !== 200) {
-            return rejectWithValue('Couldn\'t delete the post.')
+            return rejectWithValue('Couldn\'t delete the post.');
         }
     }
 );

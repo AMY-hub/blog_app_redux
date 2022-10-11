@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { debounce } from '../../utils/debounce';
 import { selectByAuthor, selectOrder, selectSearch, selectTopicFilter } from '../filter/filter.slice';
 import { selectUserData } from '../user/user.slice';
 import { loadPosts } from './posts.actions';
@@ -47,6 +48,7 @@ export const usePagination: UsePaginationHook = (totalCount, itemsPerPage) => {
         }
         return rangeArr;
     }
+
     const paginationRange: Array<number | '...'> = useMemo(() => {
         if (pagesTotalCount <= 5) {
             return range(1, pagesTotalCount);

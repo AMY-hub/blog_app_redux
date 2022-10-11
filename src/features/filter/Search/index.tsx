@@ -6,7 +6,7 @@ import styles from './style.module.scss';
 
 export const Search = () => {
 
-    const [search, handleChange, handleReset] = useSearch();
+    const [handleChange, handleReset] = useSearch();
 
     return (
         <form
@@ -16,7 +16,6 @@ export const Search = () => {
             <input
                 placeholder='Search...'
                 type="search"
-                value={search}
                 className={styles.search__field}
                 onChange={handleChange} />
             <button

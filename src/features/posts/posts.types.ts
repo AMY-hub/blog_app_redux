@@ -20,7 +20,6 @@ export type OptionsMap = {
     [Property in Topics]: OptionType
 }
 
-
 export interface PostsWithCount {
     posts: PostData[],
     totalCount: number,
