@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import cn from 'classnames';
 import { ButtonProps } from './button.types';
 import { Link } from 'react-router-dom';
@@ -15,14 +16,14 @@ export const Button: React.FC<ButtonProps> = (props): JSX.Element => {
             <Link to={to} className={classes} {...rest}>
                 {children}
             </Link>
-        )
+        );
     } else if (as === 'a') {
         const { className, styleType, size, as, children, ...rest } = props;
         return (
             <a className={classes} target='_blank' {...rest}>
                 {children}
             </a>
-        )
+        );
     } else {
         const { className, styleType, size, as, children, withLoading, loading, ...rest } = props;
 
@@ -47,13 +48,14 @@ export const Button: React.FC<ButtonProps> = (props): JSX.Element => {
                         </button >
                         :
                         <button
+                            type='button'
                             className={classes}
                             {...rest}>
                             {children}
                         </button >
                 }
             </>
-        )
+        );
     }
-}
+};
 

@@ -44,7 +44,7 @@ export const PostForm: React.FC<PostFormProps> = ({ postForEdit }) => {
     const successFn = ({ id }: { id: number }): void => {
         navigate(`/posts/${id}`);
         successAlert('Post was successfully published!');
-    }
+    };
 
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
@@ -80,7 +80,7 @@ export const PostForm: React.FC<PostFormProps> = ({ postForEdit }) => {
                 .then(successFn)
                 .catch((err: Error) => console.log(err.message));
         }
-    }
+    };
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -123,7 +123,6 @@ export const PostForm: React.FC<PostFormProps> = ({ postForEdit }) => {
                 <ErrorMessage text={error} />
             }
             <Button
-                as='button'
                 withLoading={true}
                 loading={status === 'pending'}
                 size='l'
@@ -132,5 +131,5 @@ export const PostForm: React.FC<PostFormProps> = ({ postForEdit }) => {
                 Publish
             </Button>
         </form>
-    )
-}
+    );
+};

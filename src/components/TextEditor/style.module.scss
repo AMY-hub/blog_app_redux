@@ -1,56 +1,59 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins";
 
 .texteditor {
-    @include form-field;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	@include form-field;
 
-    p[data-placeholder]:first-child::before {
-        content: attr(data-placeholder);
-        font-size: 1rem;
-        color: var(--dark-text);
-    }
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-    ul, ol {
-        margin-left: 1.5rem;
-    }
+	p[data-placeholder]:first-child::before {
+		content: attr(data-placeholder);
+		color: var(--dark-text);
+		font-size: 1rem;
+	}
 
-    code {
-        font-family: 'Courier New', Courier, monospace;
-        color: var(--accent-second-contrast);
-    }
+	ul,
+	ol {
+		margin-left: 1.5rem;
+	}
+
+	code {
+		color: var(--accent-second-contrast);
+		font-family: "Courier New", Courier, monospace;
+	}
 }
 
 .texteditor__textfield {
-    padding: 1rem;
-    min-height: 10rem;
-    word-break: break-word;
+	min-height: 10rem;
+	padding: 1rem;
+	word-break: break-word;
 }
 
 .texteditor__info {
-    font-size: 0.9rem;
-    color: var(--dark-text);
+	color: var(--dark-text);
+	font-size: 0.9rem;
 }
 
 .texteditor__add_img {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .texteditor__img_url {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-    input {
-        margin-top: 0.5rem;
-        @include form-field;
-    }
+	input {
+		margin-top: 0.5rem;
+
+		@include form-field;
+	}
 }
 
 .danger {
-    color: var(--warning);
+	color: var(--warning);
 }

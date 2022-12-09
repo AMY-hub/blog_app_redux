@@ -22,11 +22,11 @@ export const PostsList = () => {
         paginationRange } = usePagination(totalCount, itemsPerPage);
 
     if (loadingStatus === 'pending') {
-        return <Preloader />
+        return <Preloader />;
     }
 
     if (error) {
-        return <ErrorMessage text={error} />
+        return <ErrorMessage text={error} />;
     }
 
     return (
@@ -50,5 +50,5 @@ export const PostsList = () => {
                 />
             }
         </div>
-    )
-}
+    );
+};

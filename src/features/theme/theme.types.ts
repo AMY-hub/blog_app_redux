@@ -5,4 +5,4 @@ export const enum Theme {
 
 export type ThemeState = {
     theme: Theme
-}
+};

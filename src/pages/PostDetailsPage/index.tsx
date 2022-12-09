@@ -21,7 +21,7 @@ export const PostDetailsPage = () => {
         }
         const promise = dispatch(loadDetails(id));
         return () => promise.abort();
-    }, [dispatch, id]);
+    }, [dispatch, id, navigate]);
 
     return (
         <div className={styles.wrapper}>
@@ -29,5 +29,5 @@ export const PostDetailsPage = () => {
             {error && <ErrorMessage text={error} />}
             {post && <PostDetails post={post} />}
         </div>
-    )
-}
+    );
+};

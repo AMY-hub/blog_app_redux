@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../app/hooks'
+import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { selectTheme, toggleTheme } from '../theme.slice';
 import { Theme } from '../theme.types';
 
@@ -16,7 +16,7 @@ export const useTheme: UseThemeHook = () => {
 
     const setTheme = (theme: Theme) => {
         dispatch(toggleTheme(theme));
-    }
+    };
 
     return [theme, setTheme];
-}
+};

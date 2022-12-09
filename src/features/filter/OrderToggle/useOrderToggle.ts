@@ -11,7 +11,7 @@ export const useOrderToggle: UseOrderToggle = () => {
 
     const handleToggle = (ord: Order) => {
         dispatch(toggleOrder(ord));
-    }
+    };
 
     return [order, handleToggle];
-}
+};

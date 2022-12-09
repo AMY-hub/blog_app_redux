@@ -15,13 +15,13 @@ export const useSearch: UseSearch = () => {
         dispatch(setSearch(searchString));
         searchParams.set('page', '1');
         setSearchParams(searchParams);
-    }
+    };
 
     handleChange = debounce(handleChange, 500);
 
     const handleReset = (): void => {
         dispatch(setSearch(''));
-    }
+    };
 
     return [handleChange, handleReset];
-}
+};

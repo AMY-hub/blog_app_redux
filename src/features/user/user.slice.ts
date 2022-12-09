@@ -18,7 +18,7 @@ const persistConfig = {
     storage,
     version: 1,
     whitelist: ['userData', 'accessToken', 'authAt']
-}
+};
 
 const userSlice = createSlice({
     name: 'user',
@@ -34,8 +34,6 @@ const userSlice = createSlice({
                 if (action.payload?.authAt) {
                     const now = Date.now();
                     const isExpired = (now - action.payload.authAt) / 1000 > 3600;
-                    console.log('EXP CHECKED', (now - action.payload.authAt) / 1000);
-
                     if (isExpired) {
                         action.payload = initialState;
                     }
@@ -57,8 +55,8 @@ const userSlice = createSlice({
             .addMatcher(isRejected, (state, action) => {
                 state.loading = false;
                 state.authAt = null;
-                state.error = action.payload || action.error.message || 'Something went wrong...'
-            })
+                state.error = action.payload || action.error.message || 'Something went wrong...';
+            });
     }
 });
 

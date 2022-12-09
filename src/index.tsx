@@ -9,6 +9,7 @@ import './styles/reset.scss';
 import './styles/vars.scss';
 import { PersistGate } from 'redux-persist/integration/react';
 
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
@@ -20,4 +21,4 @@ root.render(
       </PersistGate>
     </Provider>
   </HashRouter>
-)
+);

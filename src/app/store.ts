@@ -23,7 +23,7 @@ const persistConfig = {
   storage,
   version: 1,
   whitelist: ['theme']
-}
+};
 
 const rootReducer = combineReducers({
   user: persistedUserReducer,
@@ -33,7 +33,7 @@ const rootReducer = combineReducers({
   details: detailsReducer
 });
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
@@ -48,7 +48,7 @@ export const store = configureStore({
   })
 });
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;

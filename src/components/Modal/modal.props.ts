@@ -5,5 +5,5 @@ export interface ModalProps {
     onClose: () => void,
     callback: (onClose: () => void) => void,
     confitmBtnText?: string,
-    cancelBtnText?: string
+    cancelBtnText?: string,
 }

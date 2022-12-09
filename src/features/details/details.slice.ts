@@ -1,8 +1,8 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 import { ThunkApiTypes } from '../../app/store.types';
 import { PostData } from '../../types';
-import { DetailsState } from './details.types'
+import { DetailsState } from './details.types';
 
 const initialState = {
     post: null,
@@ -29,7 +29,7 @@ const detailsSlice = createSlice({
                 state.loading = false;
                 state.error = null;
                 state.post = action.payload;
-            })
+            });
     }
 });
 

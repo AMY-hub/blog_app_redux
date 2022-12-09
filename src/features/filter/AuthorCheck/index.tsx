@@ -1,7 +1,7 @@
 import cn from 'classnames';
+import { useAuthorCheck } from './useAuthorCheck';
 
 import styles from './style.module.scss';
-import { useAuthorCheck } from './useAuthorCheck';
 
 export const AuthorCheck = () => {
 
@@ -23,5 +23,5 @@ export const AuthorCheck = () => {
                 Show my posts only
             </label>
         </div>
-    )
-}
+    );
+};

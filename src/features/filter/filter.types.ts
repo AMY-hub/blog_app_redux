@@ -5,7 +5,7 @@ export type FilterState = {
     order: Order,
     selectByAuthor: boolean,
     search: string
-}
+};
 
 export type Order = 'asc' | 'desc';
 
@@ -16,5 +16,5 @@ export type OptionType = {
 
 export type OptionsMap = {
     [Property in Filter]: OptionType
-}
+};
 

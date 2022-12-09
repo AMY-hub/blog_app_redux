@@ -26,5 +26,5 @@ export const Search = () => {
                 <ClearIcon width={18} height={18} />
             </button>
         </form>
-    )
-}
+    );
+};

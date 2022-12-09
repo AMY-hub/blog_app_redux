@@ -46,7 +46,7 @@ export const TextEditor: React.FC<EditorProps> = ({ HTML, setHTML, className, li
                 .run();
         }
         onClose();
-    }
+    };
 
     const handleAddImage = () => {
         confirmAlert({
@@ -66,7 +66,7 @@ export const TextEditor: React.FC<EditorProps> = ({ HTML, setHTML, className, li
                 );
             }
         });
-    }
+    };
 
     return (
         <div className={cn(styles.texteditor, className)} {...props}>
@@ -97,5 +97,5 @@ export const TextEditor: React.FC<EditorProps> = ({ HTML, setHTML, className, li
                 </div>
             }
         </div>
-    )
-}
+    );
+};

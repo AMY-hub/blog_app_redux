@@ -9,8 +9,8 @@ export const formatDateTime: FormatDateTime = (timestamp, locale, param) => {
         case 'date':
             return date.toLocaleDateString(locale);
         case 'time':
-            return date.toLocaleTimeString(locale)
+            return date.toLocaleTimeString(locale);
         default:
             return date.toLocaleString(locale);
     }
-}
+};

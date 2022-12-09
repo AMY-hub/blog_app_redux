@@ -28,7 +28,6 @@ export const Header = () => {
                     <p className={styles.header__greeting}>{`Hello, ${userInfo.name}!`}</p>}
                 {token ?
                     <Button
-                        as='button'
                         styleType='light'
                         size='l'
                         onClick={() => dispatch(logout())}
@@ -36,7 +35,6 @@ export const Header = () => {
                     </Button>
                     :
                     <Button
-                        as='button'
                         size='xl'
                         onClick={() => navigate('/login')}
                         className={styles.login_link}
@@ -44,5 +42,5 @@ export const Header = () => {
                 }
             </div>
         </header>
-    )
-}
+    );
+};

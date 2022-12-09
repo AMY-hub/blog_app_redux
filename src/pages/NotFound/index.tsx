@@ -17,5 +17,5 @@ export const NotFound = () => {
                 Go to homepage
             </Button>
         </div>
-    )
-}
+    );
+};

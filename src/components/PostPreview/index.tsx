@@ -25,5 +25,5 @@ export const PostPreview: React.FC<PostPreviewProps> = ({ title, preview, id, au
                 id={id}
                 authorId={authorId} />
         </article>
-    )
-}
+    );
+};

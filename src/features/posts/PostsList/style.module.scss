@@ -1,25 +1,25 @@
 .postslist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
 }
 
 .posts {
-    width: 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2rem;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	width: 100%;
+	gap: 2rem;
 
-    @media(max-width: 1240px) {
-        grid-template-columns: 1fr;
-    }
+	@media (max-width: 1240px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .notfound {
-    margin: auto;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--dark-text);
+	margin: auto;
+	color: var(--dark-text);
+	font-size: 1.2rem;
+	font-weight: 500;
 }

@@ -13,7 +13,7 @@ const persistThemeConfig = {
     storage,
     version: 1,
     whitelist: ['theme']
-}
+};
 
 const themeSlice = createSlice({
     name: 'theme',

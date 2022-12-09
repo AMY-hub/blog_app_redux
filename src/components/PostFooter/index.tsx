@@ -32,5 +32,5 @@ export const PostFooter: React.FC<PostFooterProps> = ({ author, topic, createdAt
                 </span>
             </div>
         </div>
-    )
-}
+    );
+};

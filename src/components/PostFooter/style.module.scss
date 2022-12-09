@@ -1,24 +1,24 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9rem;
-    color: var(--dark-text);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--dark-text);
+	font-size: 0.9rem;
 
-    span {
-        display: inline-block;
-        padding-bottom: 0.5rem;
-    }
+	span {
+		display: inline-block;
+		padding-bottom: 0.5rem;
+	}
 
-    @media(max-width: 426px) {
-        font-size: 0.8rem;
-        flex-direction: column-reverse;
-        align-items: start;
-    }
+	@media (max-width: 426px) {
+		flex-direction: column-reverse;
+		align-items: start;
+		font-size: 0.8rem;
+	}
 }
 
 .info_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }

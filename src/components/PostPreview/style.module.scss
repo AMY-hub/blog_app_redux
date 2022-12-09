@@ -1,48 +1,50 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins";
 
 .preview {
-   @include content-block;
-   min-width: 0;
-   min-height: 0;
-   word-break: break-word;
-    ul, li {
-        margin-left: 1.5rem;
-    }
+	@include content-block;
+
+	min-width: 0;
+	min-height: 0;
+	word-break: break-word;
+
+	ul,
+	li {
+		margin-left: 1.5rem;
+	}
 }
 
 .preview__title {
-    font-size: 1.5rem;
-    color: var(--bright-text);
-    font-weight: 500;
-    margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
+	color: var(--bright-text);
+	font-size: 1.5rem;
+	font-weight: 500;
 
-    @media(max-width: 430px) {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
+	@media (max-width: 430px) {
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
 }
 
 .preview__excerpt {
-    margin-bottom: 2em;
+	margin-bottom: 2em;
 
-    @media(max-width: 430px) {
-        font-size: 1.1rem;
-        margin-bottom: 1.2rem;
-    }
+	@media (max-width: 430px) {
+		margin-bottom: 1.2rem;
+		font-size: 1.1rem;
+	}
 }
 
 .preview__readmore {
-    margin-left: auto;
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
+	margin-left: auto;
 
-    &::after {
-        font-size: 1.7em;
-        vertical-align: middle;
-        margin-left: 0.2em;
-    }
+	&::after {
+		margin-left: 0.2em;
+		font-size: 1.7em;
+		vertical-align: middle;
+	}
 
-    @media(max-width: 430px) {
-        margin-bottom: 0.7rem;
-    }
+	@media (max-width: 430px) {
+		margin-bottom: 0.7rem;
+	}
 }
-

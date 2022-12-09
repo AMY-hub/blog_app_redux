@@ -20,7 +20,7 @@ export const useSetFilter: UseSetFilterHook = () => {
             setSearchParams(searchParams);
             dispatch(changeTopicFilter(opt.value));
         }
-    }
+    };
 
     return [filter, setFilter];
-}
+};

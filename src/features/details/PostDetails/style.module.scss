@@ -1,33 +1,34 @@
-@import '../../../styles/mixins.scss';
+@import "../../../styles/mixins";
 
 .post {
-    @include content-block;
-    width: 100%;
-    word-break: break-word;
+	@include content-block;
 
-    ul, li {
-        margin-left: 1.5rem;
-    }
+	width: 100%;
+	word-break: break-word;
 
-    &__title {
-        margin-bottom: 1.5rem;
-        color: var(--bright-text);
-        font-size: 2rem;
-        font-weight: 500;
+	ul,
+	li {
+		margin-left: 1.5rem;
+	}
 
-        @media(max-width: 430px) {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-    }
+	&__title {
+		margin-bottom: 1.5rem;
+		color: var(--bright-text);
+		font-size: 2rem;
+		font-weight: 500;
 
-    &__body {
-        margin-bottom: 2em;
+		@media (max-width: 430px) {
+			margin-bottom: 1rem;
+			font-size: 1.2rem;
+		}
+	}
 
-        @media(max-width: 430px) {
-            font-size: 1.1rem;
-            margin-bottom: 1.2rem;
-        }
-    }
+	&__body {
+		margin-bottom: 2em;
+
+		@media (max-width: 430px) {
+			margin-bottom: 1.2rem;
+			font-size: 1.1rem;
+		}
+	}
 }
-

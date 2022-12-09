@@ -14,7 +14,6 @@ export const LoginPage = () => {
         <section className={styles.login}>
             <div className={styles.options}>
                 <Button
-                    as='button'
                     styleType='light'
                     size='xl'
                     className={cn(styles[option], {
@@ -24,7 +23,6 @@ export const LoginPage = () => {
                 >Sign in
                 </Button>
                 <Button
-                    as='button'
                     size='xl'
                     className={cn(styles[option], {
                         [styles.active]: option === 'signup'
@@ -39,5 +37,5 @@ export const LoginPage = () => {
                     <SighUpForm />
             }
         </section>
-    )
-}
+    );
+};

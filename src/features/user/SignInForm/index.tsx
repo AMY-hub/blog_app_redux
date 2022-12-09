@@ -23,7 +23,7 @@ export const SighInForm = (): JSX.Element => {
         })).unwrap()
             .then(() => navigate('/'))
             .catch((err: Error) => console.log(err.message));
-    }
+    };
 
     return (
         <>
@@ -45,7 +45,6 @@ export const SighInForm = (): JSX.Element => {
                         minLength={6} />
                 </label>
                 <Button
-                    as='button'
                     withLoading={true}
                     loading={loading}
                     styleType='light'
@@ -55,5 +54,5 @@ export const SighInForm = (): JSX.Element => {
                 </Button>
             </form>
         </>
-    )
-}
+    );
+};

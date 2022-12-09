@@ -12,7 +12,7 @@ export const ThemeSwitcher = (): JSX.Element => {
     if (e.key === 'Enter') {
       setTheme(t);
     }
-  }
+  };
 
   return (
     <div className={styles.theme_switcher}>
@@ -53,6 +53,6 @@ export const ThemeSwitcher = (): JSX.Element => {
         />
       </label>
     </div>
-  )
-}
+  );
+};
 

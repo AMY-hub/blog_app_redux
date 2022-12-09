@@ -91,5 +91,5 @@ export const TextEditorMenu: React.FC<MenuProps> = ({ editor, type }) => {
                 </>
             }
         </div>
-    )
-}
+    );
+};

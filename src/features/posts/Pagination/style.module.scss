@@ -1,49 +1,50 @@
-@import '../../../styles/mixins.scss';
+@import "../../../styles/mixins";
 
 .pagination {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
 
-    @media(max-width: 430px) {
-        gap: 0.25rem;
-    }
+	@media (max-width: 430px) {
+		gap: 0.25rem;
+	}
 
-    &__page {
-        padding: 0.4rem 0.8rem;
-        border: 2px solid var(--accent-first);
-        color: var(--bright-text);
-        background-color: transparent;
-        border-radius: 50%;
-        font-weight: 500;
+	&__page {
+		padding: 0.4rem 0.8rem;
+		border: 2px solid var(--accent-first);
+		border-radius: 50%;
+		background-color: transparent;
+		color: var(--bright-text);
+		font-weight: 500;
 
-        @media(max-width: 430px) {
-            padding: 0.3rem 0.65rem;
-        }
-    }
+		@media (max-width: 430px) {
+			padding: 0.3rem 0.65rem;
+		}
+	}
 
-    &__page.active {
-        background-color: var(--accent-first);
-    }
+	&__page.active {
+		background-color: var(--accent-first);
+	}
 
-    &__next, &__prev {
-        padding: 0.5rem;
+	&__next,
+	&__prev {
+		padding: 0.5rem;
 
-        @media(max-width: 430px) {
-            padding: 0.3rem;
-        }
-    }
+		@media (max-width: 430px) {
+			padding: 0.3rem;
+		}
+	}
 
-    &__prev::after{ 
-        display: inline-block;
-        transform: rotate(180deg);
-    }
+	&__prev::after {
+		display: inline-block;
+		transform: rotate(180deg);
+	}
 
-    .dots {
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: var(--accent-second-contrast);
-    }
+	.dots {
+		color: var(--accent-second-contrast);
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
 }

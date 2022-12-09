@@ -52,7 +52,7 @@ export function CustomSelect<E extends { value: string, label: string }>({ title
             ...provided,
             width: 'fit-content',
         })
-    }
+    };
 
     return (
         <div>
@@ -66,5 +66,5 @@ export function CustomSelect<E extends { value: string, label: string }>({ title
                 styles={customStyles}
             />
         </div>
-    )
+    );
 }

@@ -16,5 +16,5 @@ export const PostDetails: React.FC<PostDetailsProps> = ({ post }) => {
                 id={post.id}
                 authorId={post.authorId} />
         </article>
-    )
-}
+    );
+};

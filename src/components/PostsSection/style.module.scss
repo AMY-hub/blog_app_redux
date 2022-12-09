@@ -1,12 +1,12 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins";
 
 .posts_section {
-    width: 100%;
+	width: 100%;
 }
 
 .posts_section__header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-bottom: 1rem;
 }

@@ -1,35 +1,36 @@
-@import '../assets/iconFonts/style.css';
+@import "../assets/iconFonts/style.css";
 
 body {
-    font-size: 18px;
-    background: var(--bg);
-    font-family: var(--main-font);
-    
-    @media (max-width: 900px) {
-        font-size: 16px;
-    }
-    @media(max-width: 426px) {
-        font-size: 14px;
-    }
+	background: var(--bg);
+	font-family: var(--main-font);
+	font-size: 18px;
+
+	@media (max-width: 900px) {
+		font-size: 16px;
+	}
+
+	@media (max-width: 426px) {
+		font-size: 14px;
+	}
 }
 
 #root {
-    height: 100%;
+	height: 100%;
 }
 
 .success-alert {
-    background-color: var(--success);
-    color: var(--bright-text);
-    font-size: 1.3rem;
-    font-weight: 500;
-    box-shadow: 0 0 0.8em rgba(35, 176, 103, 0.4);
+	background-color: var(--success);
+	box-shadow: 0 0 0.8em rgb(35 176 103 / 40%);
+	color: var(--bright-text);
+	font-size: 1.3rem;
+	font-weight: 500;
 }
 
 .hidden {
-    width: 1px;
-    height: 1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	border: 0;
 }

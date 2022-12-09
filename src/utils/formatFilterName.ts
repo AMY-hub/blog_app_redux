@@ -7,7 +7,7 @@ export const formatFilterName = (param: string): string => {
             break;
         case 'javascript': paramName = 'About JavaScript';
             break;
-        default: paramName = 'All posts'
+        default: paramName = 'All posts';
     }
     return paramName;
-}
+};

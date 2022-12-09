@@ -10,5 +10,5 @@ export const ErrorMessage: React.FC<ErrorMessageProps> = ({ text, className, ...
             className={cn(styles.error, className)}
             {...props}
         >{`Error: ${text}`}</div>
-    )
-}
+    );
+};

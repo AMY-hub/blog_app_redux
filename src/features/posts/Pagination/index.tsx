@@ -11,7 +11,6 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, pagesTotalC
         if (typeof el === 'number') {
             return (
                 <Button
-                    as='button'
                     className={cn(styles.pagination__page, {
                         [styles.active]: currentPage === el
                     })}
@@ -21,9 +20,9 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, pagesTotalC
                 >
                     {el}
                 </Button>
-            )
+            );
         } else {
-            return <span key={nanoid()} className={styles.dots}>{el}</span>
+            return <span key={nanoid()} className={styles.dots}>{el}</span>;
         }
 
     });
@@ -31,7 +30,6 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, pagesTotalC
     return (
         <div className={styles.pagination}>
             <Button
-                as='button'
                 styleType='light'
                 className={cn(styles.pagination__prev, 'icon-arrow')}
                 disabled={currentPage === 1}
@@ -40,7 +38,6 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, pagesTotalC
             ></Button>
             {pagesBtns}
             <Button
-                as='button'
                 styleType='light'
                 className={cn(styles.pagination__next, 'icon-arrow')}
                 disabled={currentPage === pagesTotalCount}
@@ -48,5 +45,5 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, pagesTotalC
                 aria-label='to the next page'
             ></Button>
         </div>
-    )
-}
+    );
+};

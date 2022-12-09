@@ -1,4 +1,4 @@
-export interface PostFormData {
+export interface PostFormData extends Record<string, string | number> {
     title: string,
     preview: string,
     body: string,
@@ -18,7 +18,7 @@ export interface PostData {
     id: number,
 }
 
-export type Topics = | 'css' | 'html' | 'javascript'
+export type Topics = | 'css' | 'html' | 'javascript';
 
 export type Filter = 'all' | 'css' | 'javascript' | 'html';
 

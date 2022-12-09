@@ -1,7 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { debounce } from '../../utils/debounce';
 import { selectByAuthor, selectOrder, selectSearch, selectTopicFilter } from '../filter/filter.slice';
 import { selectUserData } from '../user/user.slice';
 import { loadPosts } from './posts.actions';
@@ -19,7 +18,7 @@ type UsePaginationHook = (totalCount: number, itemsPerPage: number) => {
 
 export const usePagination: UsePaginationHook = (totalCount, itemsPerPage) => {
     const [searchParams, setSearchParams] = useSearchParams();
-    const pageFromQuery = parseInt(searchParams.get('page')!);
+    const pageFromQuery = parseInt(searchParams.get('page') || '');
     const dispatch = useAppDispatch();
     const currentPage = useAppSelector(selectCurrentPage);
     const filter = useAppSelector(selectTopicFilter);
@@ -35,19 +34,19 @@ export const usePagination: UsePaginationHook = (totalCount, itemsPerPage) => {
             filter,
             authotId: (byAuthor && user?.id) ? user.id : undefined,
             search
-        }
+        };
         dispatch(loadPosts(loadedPostsParams));
-    }, [dispatch, filter, order, byAuthor, search]);
+    }, [dispatch, filter, order, byAuthor, search, pageFromQuery, currentPage, user?.id]);
 
     const pagesTotalCount = Math.ceil(totalCount / itemsPerPage);
 
     const range = (start: number, end: number): number[] => {
-        let rangeArr: number[] = [];
+        const rangeArr: number[] = [];
         for (let i = start; i <= end; i++) {
-            rangeArr.push(i)
+            rangeArr.push(i);
         }
         return rangeArr;
-    }
+    };
 
     const paginationRange: Array<number | '...'> = useMemo(() => {
         if (pagesTotalCount <= 5) {
@@ -63,11 +62,11 @@ export const usePagination: UsePaginationHook = (totalCount, itemsPerPage) => {
         }
 
         if (currentPage <= maxLeftVisible) {
-            return [...range(1, maxLeftVisible + 1), dots, pagesTotalCount]
+            return [...range(1, maxLeftVisible + 1), dots, pagesTotalCount];
         }
 
         if (currentPage >= maxRightVisible) {
-            return [1, dots, ...range(maxRightVisible - 1, pagesTotalCount)]
+            return [1, dots, ...range(maxRightVisible - 1, pagesTotalCount)];
         }
 
         return range(1, pagesTotalCount);
@@ -81,7 +80,7 @@ export const usePagination: UsePaginationHook = (totalCount, itemsPerPage) => {
             searchParams.set('page', `${currentPage + 1}`);
             setSearchParams(searchParams);
         }
-    }
+    };
     const getPrevPage = (): void => {
         if (currentPage <= 1) {
             return;
@@ -90,7 +89,7 @@ export const usePagination: UsePaginationHook = (totalCount, itemsPerPage) => {
             searchParams.set('page', `${currentPage - 1}`);
             setSearchParams(searchParams);
         }
-    }
+    };
 
     const setPage = (n: number) => {
         if (n > pagesTotalCount) {
@@ -102,7 +101,7 @@ export const usePagination: UsePaginationHook = (totalCount, itemsPerPage) => {
         }
         searchParams.set('page', `${n}`);
         setSearchParams(searchParams);
-    }
+    };
 
     return { currentPage, pagesTotalCount, getNextPage, getPrevPage, setPage, paginationRange };
-}
+};

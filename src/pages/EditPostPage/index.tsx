@@ -30,7 +30,7 @@ export const EditPostPage = () => {
         if (!post || post.id !== +id) {
             dispatch(loadDetails(id));
         }
-    }, [id, dispatch, navigate, post, token])
+    }, [id, dispatch, navigate, post, token]);
 
     const handleConfirm = (onClose: () => void) => {
         onClose();
@@ -43,7 +43,7 @@ export const EditPostPage = () => {
                 successAlert('Post was successfully deleted.');
             })
             .catch((err: Error) => console.log(err.message));
-    }
+    };
 
     const handleDelete = () => {
         confirmAlert({
@@ -58,7 +58,7 @@ export const EditPostPage = () => {
                 );
             }
         });
-    }
+    };
 
     return (
         <>
@@ -68,7 +68,6 @@ export const EditPostPage = () => {
             {post &&
                 <div className={styles.editform_container}>
                     <Button
-                        as='button'
                         styleType='ghost'
                         onClick={handleDelete}
                         className={styles.delete_btn}
@@ -81,5 +80,5 @@ export const EditPostPage = () => {
                 </div>
             }
         </>
-    )
-}
+    );
+};

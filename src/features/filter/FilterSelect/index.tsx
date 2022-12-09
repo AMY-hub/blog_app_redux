@@ -22,5 +22,5 @@ export const FilterSelect = (): JSX.Element => {
             value={optionsMap[filter] || optionsMap.all}
             onChange={setFilter}
         />
-    )
-}
+    );
+};

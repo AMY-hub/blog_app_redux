@@ -13,7 +13,7 @@ export const useAuthorCheck: UseAuthorCheck = () => {
         dispatch(toggleSelectByAuthor());
         searchParams.set('page', '1');
         setSearchParams(searchParams);
-    }
+    };
 
     return [checked, toggleAuthorCheck];
-}
+};

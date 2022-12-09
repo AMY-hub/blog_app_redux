@@ -20,7 +20,6 @@ export const Modal: React.FC<ModalProps> = ({ onClose, children, callback, confi
                         {confitmBtnText}
                     </Button>
                     <Button
-                        as='button'
                         styleType='light'
                         className='modal__no'
                         onClick={onClose}
@@ -31,7 +30,6 @@ export const Modal: React.FC<ModalProps> = ({ onClose, children, callback, confi
                 </div>
             </div>
         </div>
-
-    )
-}
+    );
+};
 

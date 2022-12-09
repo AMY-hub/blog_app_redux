@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 import { Order } from '../features/filter/filter.types';
 import { RootState } from './store';
 

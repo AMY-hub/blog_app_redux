@@ -1,48 +1,49 @@
 .order {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    grid-column: 3 / 4;
+	display: flex;
+	grid-column: 3 / 4;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.5rem;
 
-    @media(max-width: 470px) {
-        grid-column: 1 / 3;
-    }
+	@media (max-width: 470px) {
+		grid-column: 1 / 3;
+	}
 }
 
 .order_label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: var(--dark-text);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--dark-text);
+	font-size: 1.2rem;
+	cursor: pointer;
 
-    &:hover {
-        text-shadow: 0 0 0.4em var(--accent-second);
-    }
+	&:hover {
+		text-shadow: 0 0 0.4em var(--accent-second);
+	}
 
-    &:focus {
-        text-decoration: underline;
-    }
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+.desc_icon,
+.asc_icon {
+	display: none;
+	width: 1rem;
+	height: 1rem;
+	margin-right: 0.3rem;
+	transform: rotate(-90deg);
+	fill: var(--dark-text);
 }
 
 .label_active {
-    font-weight: 600;
-    color: var(--accent-second-contrast);
+	color: var(--accent-second-contrast);
+	font-weight: 600;
 
-    .desc_icon,.asc_icon {
-        display: inline-block;
-        fill: var(--accent-second-contrast)
-    }
+	.desc_icon,
+	.asc_icon {
+		display: inline-block;
+		fill: var(--accent-second-contrast);
+	}
 }
-
-.desc_icon,.asc_icon {
-    display: none;
-    width: 1rem;
-    height: 1rem;
-    fill: var(--dark-text);
-    transform: rotate(-90deg);
-    margin-right: 0.3rem;
-}
-

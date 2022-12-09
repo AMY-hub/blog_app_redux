@@ -1,31 +1,33 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins";
 
 .login {
-    @include content-block;
-    max-width: 450px;
-    margin: 0 auto;
+	@include content-block;
+
+	max-width: 450px;
+	margin: 0 auto;
 }
 
 .options {
-    margin: 0 auto;
-    margin-bottom: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0 auto;
+	margin-bottom: 2.5rem;
 
-    .signin,.signup{
-        background-color: transparent;
-        font-weight: 500;
-        color: var(--dark-text);
-    }
+	.signin,
+	.signup {
+		background-color: transparent;
+		color: var(--dark-text);
+		font-weight: 500;
+	}
 
-    .signin.active {
-        color: var(--accent-second-contrast);
-        box-shadow: 0 0 0.5em var(--accent-second);
-    }
+	.signin.active {
+		box-shadow: 0 0 0.5em var(--accent-second);
+		color: var(--accent-second-contrast);
+	}
 
-    .signup.active {
-        color: var(--accent-first);
-        box-shadow: 0 0 0.5em var(--accent-first);
-    }
+	.signup.active {
+		box-shadow: 0 0 0.5em var(--accent-first);
+		color: var(--accent-first);
+	}
 }

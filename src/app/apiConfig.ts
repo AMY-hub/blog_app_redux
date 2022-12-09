@@ -25,18 +25,18 @@ export const getSelectedPosts = (order: Order, page?: number, filter?: string, a
         selected += `&_page=${page}&_limit=${itemsPerPage}`;
     }
     if (filter && filter !== 'all') {
-        selected += `&topic=${filter}`
+        selected += `&topic=${filter}`;
     }
     if (authorId) {
-        selected += `&authorId=${authorId}`
+        selected += `&authorId=${authorId}`;
     }
     return selected;
-}
+};
 
 export const getSearched = (search: string) => {
     return posts + `?q=${search}&_page=1&_limit=${itemsPerPage}`;
-}
+};
 
 export const getPostDetails = (id: string) => {
     return basePath + '/posts/' + id;
-}
+};

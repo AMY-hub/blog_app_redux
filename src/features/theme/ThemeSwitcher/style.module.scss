@@ -1,57 +1,62 @@
 .theme_switcher {
-    display: flex;
-    justify-content: flex-end;
-    
-    &__light,&__dark {
-        flex-shrink: 0;
-        cursor: pointer;
-        padding: 0.2em;
-        border: 2px solid var(--dark-text);
-        border-radius: 0.3rem;
+	display: flex;
+	justify-content: flex-end;
 
-        &::after {
-            display: inline-block;
-            padding: 0.1rem;
-            font-size: 1.2rem;
-            text-align: center;
-            vertical-align: middle;
-            color: var(--dark-text);
+	&__light {
+		border-radius: 0.3rem;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 
-            @media(max-width: 750px) {
-                font-size: 1rem;
-            }
-        }
+	&__dark {
+		padding-left: 4px;
+		border-left: none;
+		border-radius: 0.3rem;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 
-        &:hover,&:focus{
-            text-shadow: 0 0 1em var(--accent-first);
-            background-color: rgba($color: #b3b3b3, $alpha: 0.3);
-        }
-    }
+	&__light,
+	&__dark {
+		flex-shrink: 0;
+		padding: 0.2em;
+		border: 2px solid var(--dark-text);
+		cursor: pointer;
 
-    &__light {
-       border-top-right-radius: 0; 
-       border-bottom-right-radius: 0;
-    }
+		&::after {
+			display: inline-block;
+			padding: 0.1rem;
+			color: var(--dark-text);
+			font-size: 1.2rem;
+			text-align: center;
+			vertical-align: middle;
 
-    &__dark {
-        border-top-left-radius: 0; 
-        border-bottom-left-radius: 0;
-        border-left: none; 
-        padding-left: 4px;
-     }
+			@media (max-width: 750px) {
+				font-size: 1rem;
+			}
+		}
 
-     .active::after {
-        color: var(--accent-first);
-        text-shadow: 0 0 0.8em var(--accent-first);
-     }
+		&:hover,
+		&:focus {
+			background-color: rgba($color: #B3B3B3, $alpha: 30%);
+			text-shadow: 0 0 1em var(--accent-first);
+		}
+	}
+
+	.active::after {
+		color: var(--accent-first);
+		text-shadow: 0 0 0.8em var(--accent-first);
+	}
 }
 
 .hidden {
-    display: inline-block;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+	display: inline-block;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	border: 0;
+	opacity: 0;
+	visibility: hidden;
 }

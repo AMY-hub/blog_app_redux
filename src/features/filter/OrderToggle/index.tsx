@@ -13,7 +13,7 @@ export const OrderToggle = () => {
         if (e.key === 'Enter') {
             handleToggle(ord);
         }
-    }
+    };
 
     return (
         <div className={styles.order}>
@@ -56,5 +56,5 @@ export const OrderToggle = () => {
                 />
             </label>
         </div>
-    )
-}
+    );
+};

@@ -24,5 +24,5 @@ export const PostsSection = () => {
             }
             <PostsList />
         </section>
-    )
-}
+    );
+};

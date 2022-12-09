@@ -1,7 +1,7 @@
 import { useAppSelector } from '../../app/hooks';
 import { AuthorCheck } from '../../features/filter/AuthorCheck';
-import { FilterSelect } from '../../features/filter/FilterSelect'
-import { OrderToggle } from '../../features/filter/OrderToggle'
+import { FilterSelect } from '../../features/filter/FilterSelect';
+import { OrderToggle } from '../../features/filter/OrderToggle';
 import { Search } from '../../features/filter/Search';
 import { selectAccessToken } from '../../features/user/user.slice';
 
@@ -18,5 +18,5 @@ export const FilterPanel = () => {
             {token && <AuthorCheck />}
             <OrderToggle />
         </div>
-    )
-}
+    );
+};

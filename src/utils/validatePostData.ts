@@ -1,4 +1,8 @@
-type ValidateFormFn = (data: { [key: string]: any }) => {
+type ValidateFormFn = (data: {
+    [key: string]: string
+    | Array<string>
+    | number
+}) => {
     invalidFields: string[],
     invalid: boolean
 };
@@ -6,7 +10,7 @@ type ValidateFormFn = (data: { [key: string]: any }) => {
 export const validateFormData: ValidateFormFn = (data) => {
     const invalidFields: string[] = [];
 
-    for (let key in data) {
+    for (const key in data) {
         const content = data[key];
 
         if (typeof content === 'string') {
@@ -25,4 +29,4 @@ export const validateFormData: ValidateFormFn = (data) => {
         invalidFields,
         invalid: !!invalidFields.length
     };
-}
+};

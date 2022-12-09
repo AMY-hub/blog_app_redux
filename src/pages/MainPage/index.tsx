@@ -7,5 +7,5 @@ export const MainPage = () => {
         <main className={styles.main}>
             <PostsSection />
         </main>
-    )
-}
+    );
+};

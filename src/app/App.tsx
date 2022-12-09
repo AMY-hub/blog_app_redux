@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 
 function App() {
-  const token = useAppSelector(selectAccessToken)
+  const token = useAppSelector(selectAccessToken);
 
   return (
     <div className='App'>
